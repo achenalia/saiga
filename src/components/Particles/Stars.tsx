@@ -57,7 +57,7 @@ const Stars = () => {
             quantity: 1,
           },
           repulse: {
-            distance: 200,
+            distance: 80,
             duration: 0.4,
           },
         },
@@ -87,7 +87,7 @@ const Stars = () => {
           density: {
             enable: true,
           },
-          value: 80,
+          value: 100,
         },
         opacity: {
           value: 0.9,
