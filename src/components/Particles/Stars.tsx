@@ -93,7 +93,7 @@ const Stars = () => {
           value: 0.9,
         },
         shape: {
-          type: "circle",
+          type: "square",
         },
         size: {
           value: { min: 3, max: 5 },
