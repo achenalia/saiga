@@ -96,7 +96,7 @@ const Stars = () => {
           type: "square",
         },
         size: {
-          value: { min: 3, max: 5 },
+          value: { min: 2, max: 6 },
         },
       },
       detectRetina: true,
