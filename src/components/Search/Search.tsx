@@ -6,6 +6,19 @@ function Search() {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     const formData = new FormData(event.currentTarget)
+    const query = formData.get('query')
+    if (query) {
+      switch (activeEngine) {
+        case 'Google': window.location.href = `https://www.google.com/search?q=${query}`
+        break
+        case 'Wikipedia': window.location.href = `https://wikipedia.com/wiki/${query}`
+        break
+        case 'Khan': window.location.href = `https://www.khanacademy.org/search?referer=%252F&page_search_query=${query}`
+        break
+        case 'Youtube': window.location.href = `https://www.youtube.com/results?search_query=${query}`
+        break
+      }
+    }
   }
 
   return (
