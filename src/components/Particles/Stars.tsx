@@ -54,7 +54,7 @@ const Stars = () => {
         },
         modes: {
           push: {
-            quantity: 4,
+            quantity: 1,
           },
           repulse: {
             distance: 200,
@@ -68,7 +68,7 @@ const Stars = () => {
         },
         links: {
           color: "#000000",
-          distance: 150,
+          distance: 200,
           enable: true,
           opacity: 0.5,
           width: 1,
@@ -90,13 +90,13 @@ const Stars = () => {
           value: 80,
         },
         opacity: {
-          value: 0.5,
+          value: 0.9,
         },
         shape: {
           type: "circle",
         },
         size: {
-          value: { min: 1, max: 5 },
+          value: { min: 3, max: 5 },
         },
       },
       detectRetina: true,
