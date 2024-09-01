@@ -68,7 +68,7 @@ const Stars = () => {
         },
         links: {
           color: "#000000",
-          distance: 200,
+          distance: 180,
           enable: true,
           opacity: 16,
           width: 4,
