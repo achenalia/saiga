@@ -70,8 +70,8 @@ const Stars = () => {
           color: "#000000",
           distance: 200,
           enable: true,
-          opacity: 0.5,
-          width: 1,
+          opacity: 16,
+          width: 2,
         },
         move: {
           direction: MoveDirection.none,
@@ -96,7 +96,7 @@ const Stars = () => {
           type: "square",
         },
         size: {
-          value: { min: 2, max: 6 },
+          value: { min: 1, max: 1 },
         },
       },
       detectRetina: true,
