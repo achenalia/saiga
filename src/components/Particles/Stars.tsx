@@ -71,7 +71,7 @@ const Stars = () => {
           distance: 200,
           enable: true,
           opacity: 16,
-          width: 2,
+          width: 4,
         },
         move: {
           direction: MoveDirection.none,
