@@ -40,7 +40,7 @@ function Search() {
             placeholder="What would you like to learn?"
             name="query"
           />
-          <button className={`border-t-2 border-b-2 border-r-2 border-zinc-900 px-4 py-2 cursor-default ${activeEngine !== '' ? 'hover:bg-zinc-900 hover:text-white hover:cursor-pointer ease-in-out duration-100' : ''}`}>Search</button>
+          <button className={`border-t-2 border-b-2 border-r-2 border-zinc-900 px-4 py-2 cursor-default text-zinc-300 ${activeEngine !== '' ? 'text-black hover:bg-zinc-900 hover:text-white hover:cursor-pointer ease-in-out duration-100 ' : ''}`}>Search</button>
         </div>
         <em>“Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.”</em>
         <strong>Richard Feynman</strong>
