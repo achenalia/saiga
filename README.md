@@ -2,7 +2,8 @@
 ![saigalogo](https://github.com/user-attachments/assets/47178f3d-3f8e-480c-958f-9455e91ffbbb)
 
 
-https://github.com/user-attachments/assets/2688691c-40dd-47eb-81eb-3d731230c428
+https://github.com/user-attachments/assets/00d91962-1f71-4787-8cde-e522e1dbc555
+
 
 
 Saiga transforms your new tab page into a personal study companion. Built with TypeScript and React, this interactive extension replaces the default new tab experience with a search engine selector designed to keep you focused on what matters most—your learning. Whether you're researching a topic or diving into your studies, Saiga empowers you to stay on track with an intuitive, learning-first interface tailored to your needs, adapting further as new features are added.
