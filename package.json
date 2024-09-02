@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start:firefox": "web-ext run --source-dir ./extension-dist/"
   },
   "dependencies": {
     "@tsparticles/react": "^3.0.0",
@@ -29,6 +30,7 @@
     "tailwindcss": "^3.4.10",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "web-ext": "^8.2.0"
   }
 }
