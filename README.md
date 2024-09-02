@@ -17,7 +17,7 @@ Saiga transforms your new tab page into a personal study companion. Built with T
 Saiga is available on both the Chrome Web Store and the Firefox Add-ons site. Install it directly from the links below:
 
 - [Install on Chrome](https://chrome.google.com/webstore/detail/saiga/lfpadbiicllfdokkhokkfpakaelildog)
-- [Install on Firefox](https://addons.mozilla.org/en-US/firefox/addon/saiga-learn-anything/))
+- [Install on Firefox](https://addons.mozilla.org/en-US/firefox/addon/saiga-learn-anything/)
 
 Click the appropriate link for your browser, then click "Add to Chrome" or "Add to Firefox" to install the extension. Once installed, Saiga will automatically replace your new tab page with its learning-focused interface.
 
