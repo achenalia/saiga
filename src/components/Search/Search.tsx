@@ -24,7 +24,8 @@ function Search() {
   return (
     <div className="flex items-center justify-center backdrop-blur-2xl bg-white border-4 border-zinc-900 pt-8 pb-8 pl-8 pr-8 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
       <form onSubmit={handleSubmit} className="flex flex-col items-center ">
-      <div className='w-52 h-24 bg-saigalogo bg-contain bg-no-repeat mb-4'></div>
+      <div className='w-52 h-24 bg-saigalogo bg-contain bg-no-repeat mb-2'></div>
+        <strong>Select your preferred search engine:</strong>
         <div className="flex gap-4 items-center justify-center w-80 h-12 pr-8 pl-8 mt-2 mb-4 border-none saturate-0 brightness-0 ">
           
           <img className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Google' ? '' : ''}`} onClick={() => setActiveEngine('Google')} width="50" height="50" src={`${activeEngine === 'Google' ? 'https://img.icons8.com/ios-filled/500/google-logo.png' : 'https://img.icons8.com/ios/150/google-logo--v1.png'}`} alt="google-logo"/>
