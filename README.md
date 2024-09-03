@@ -1,4 +1,4 @@
-# Saiga - Learn Anything
+# Saiga - Learn Anything (v1.0.1)
 ![saigalogo](https://github.com/user-attachments/assets/47178f3d-3f8e-480c-958f-9455e91ffbbb)
 
 https://github.com/user-attachments/assets/a1e630d9-74d0-4447-9dbd-8928dc0dcf99
