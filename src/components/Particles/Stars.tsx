@@ -40,7 +40,7 @@ const Stars = () => {
           value: "#FFFFFF",
         },
       },
-      fpsLimit: 120,
+      fpsLimit: 160,
       interactivity: {
         events: {
           onClick: {
