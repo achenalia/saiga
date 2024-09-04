@@ -2,7 +2,7 @@
     "name": "Saiga - Learn anything.",
     "short_name": "Saiga",
     "description": "Saiga replaces your new-tab page with a learning-first search engine selector, allowing you to learn what you care about.",
-    "version": "1.0.0",
+    "version": "1.3.0",
     "manifest_version": 3,
     "chrome_url_overrides": {
         "newtab": "index.html"
