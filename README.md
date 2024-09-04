@@ -23,7 +23,7 @@ Click the appropriate link for your browser, then click "Add to Chrome" or "Add 
 
 ## Contributing
 
-Contributions are welcome! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request. Please follow the contribution guidelines.
+Contributions are welcome! If you have ideas for new features or improvements, feel free to open an issue or submit a pull request.
 
 ## License
 
