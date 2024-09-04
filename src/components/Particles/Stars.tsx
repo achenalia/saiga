@@ -57,7 +57,7 @@ const Stars = () => {
             quantity: 1,
           },
           repulse: {
-            distance: 80,
+            distance: 150,
             duration: 0.4,
           },
         },
@@ -68,7 +68,7 @@ const Stars = () => {
         },
         links: {
           color: "#000000",
-          distance: 180,
+          distance: 300,
           enable: true,
           opacity: 16,
           width: 4,
