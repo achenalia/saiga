@@ -1,13 +1,27 @@
 import { useState } from 'react';
 import '../../index.css'
+
+import googleLogo from '../../images/google-logo.png';
+import googleLogoOutline from '../../images/google-logo-outline.png';
+
+import wikipediaLogo from '../../images/wikipedia-logo.png';
+import wikipediaLogoOutline from '../../images/wikipedia-logo-outline.png';
+
+import khanLogo from '../../images/khan-academy-logo.png';
+import khanLogoOutline from '../../images/khan-academy-logo-outline.png';
+
+import youtubeLogo from '../../images/youtube-logo.png';
+import youtubeLogoOutline from '../../images/youtube-logo-outline.png';
+
 function Search() {
   const [activeEngine, setActiveEngine] = useState('');
+  const [query, setQuery] = useState(''); 
 
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    const formData = new FormData(event.currentTarget)
-    const query = formData.get('query')
-    if (query) {
+    // Use the state variable for submission check
+    if (query.trim() && activeEngine) {
+      // You must use the state variable 'query' instead of formData.get('query')
       switch (activeEngine) {
         case 'Google': window.location.href = `https://www.google.com/search?q=${query}`
         break
@@ -21,6 +35,9 @@ function Search() {
     }
   }
 
+  // Helper variable to check if both conditions are met:
+  const isSearchReady = query.trim() !== '' && activeEngine !== '';
+
   return (
     <div className="flex items-center justify-center backdrop-blur-2xl bg-white border-4 border-zinc-900 pt-8 pb-8 pl-8 pr-8 shadow-[8px_8px_0px_rgba(0,0,0,1)]">
       <form onSubmit={handleSubmit} className="flex flex-col items-center ">
@@ -28,20 +45,62 @@ function Search() {
         <strong>Select your preferred search engine:</strong>
         <div className="flex gap-4 items-center justify-center w-80 h-12 pr-8 pl-8 mt-2 mb-4 border-none saturate-0 brightness-0 ">
           
-          <img className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Google' ? '' : ''}`} onClick={() => setActiveEngine('Google')} width="50" height="50" src={`${activeEngine === 'Google' ? 'https://img.icons8.com/ios-filled/500/google-logo.png' : 'https://img.icons8.com/ios/150/google-logo--v1.png'}`} alt="google-logo"/>
-          <img className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Wikipedia' ? '' : ''}`} onClick={() => setActiveEngine('Wikipedia')} width="50" height="50" src={`${activeEngine === 'Wikipedia' ? 'https://img.icons8.com/ios-filled/500/wikipedia.png' : 'https://img.icons8.com/ios/150/wikipedia.png'}`} alt="wikipedia"/>
-          <img className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Khan' ? '' : ''}`} onClick={() => setActiveEngine('Khan')} width="50" height="50" src={`${activeEngine === 'Khan' ? 'https://img.icons8.com/ios-filled/500/khan-academy.png' : 'https://img.icons8.com/ios/150/khan-academy.png'}`} alt="khan-academy"/>
-          <img className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Youtube' ? '' : ''}`} onClick={() => setActiveEngine('Youtube')} width="50" height="50" src={`${activeEngine === 'Youtube' ? 'https://img.icons8.com/ios-filled/500/youtube-play.png' : 'https://img.icons8.com/ios/150/youtube-play--v1.png'}`} alt="youtube-play"/>
+        <img
+          className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Google' ? '' : ''}`}
+          onClick={() => setActiveEngine('Google')}
+          width="50"
+          height="50"
+          src={activeEngine === 'Google' ? googleLogo : googleLogoOutline}
+          alt="google-logo"
+        />
+
+        <img
+          className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Wikipedia' ? '' : ''}`}
+          onClick={() => setActiveEngine('Wikipedia')}
+          width="50"
+          height="50"
+          src={activeEngine === 'Wikipedia' ? wikipediaLogo : wikipediaLogoOutline}
+          alt="wikipedia"
+        />
+
+        <img
+          className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Khan' ? '' : ''}`}
+          onClick={() => setActiveEngine('Khan')}
+          width="50"
+          height="50"
+          src={activeEngine === 'Khan' ? khanLogo : khanLogoOutline}
+          alt="khan-academy"
+        />
+
+        <img
+          className={`hover:scale-90 ease-in-out duration-100 cursor-pointer opacity-100 ${activeEngine === 'Youtube' ? '' : ''}`}
+          onClick={() => setActiveEngine('Youtube')}
+          width="50"
+          height="50"
+          src={activeEngine === 'Youtube' ? youtubeLogo : youtubeLogoOutline}
+          alt="youtube-play"
+        />
 
         </div>
-        <div>
+        <div className='pb-4'> 
           <input
-            className="px-16 py-2 border-2 border-zinc-900 outline-none mb-4 text-center drop-shadow"
+            className=" min-w-[24rem] py-2 border-2 border-zinc-900 outline-none text-center drop-shadow" 
             type="text"
             placeholder="What would you like to learn?"
             name="query"
-          />
-          <button className={`border-t-2 border-b-2 border-r-2 border-zinc-900 px-4 py-2 cursor-default text-zinc-300 ${activeEngine !== '' ? 'text-zinc-900 hover:bg-zinc-900 hover:text-white hover:cursor-pointer ease-in-out duration-100 ' : ''}`}>Search</button>
+            value={query} 
+            onChange={(e) => setQuery(e.target.value)} 
+          />          
+            <button 
+              disabled={!isSearchReady}
+              className={`w-24 border-b-2 border-r-2 border-t-2 px-4 pt-2 pb-2 rounded-r-md ease-in-out duration-200
+                ${isSearchReady
+                  ? 'text-white bg-zinc-900 border-zinc-900  hover:cursor-pointer hover:'
+                  : 'cursor-default text-zinc-300'
+                }
+              `}>
+              Search
+            </button>
         </div>
         <em>“Study hard what interests you the most in the most undisciplined, irreverent and original manner possible.”</em>
         <strong>Richard Feynman</strong>
@@ -51,4 +110,3 @@ function Search() {
 }
 
 export default Search
-
