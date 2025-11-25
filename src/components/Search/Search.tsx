@@ -95,7 +95,7 @@ function Search() {
               disabled={!isSearchReady}
               className={`w-24 border-b-2 border-r-2 border-t-2 px-4 pt-2 pb-2 rounded-r-md ease-in-out duration-200
                 ${isSearchReady
-                  ? 'text-white bg-zinc-900 border-zinc-900  hover:cursor-pointer hover:'
+                  ? 'text-white bg-zinc-900 border-zinc-900 hover:scale-105 hover:cursor-pointer'
                   : 'cursor-default text-zinc-300'
                 }
               `}>
