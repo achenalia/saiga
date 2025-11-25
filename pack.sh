@@ -33,10 +33,14 @@ cp -r dist/* "$DIR_NAME/"
 # 5) Optional lint with web-ext
 web-ext lint --source-dir="$DIR_NAME" || echo "web-ext lint reported issues"
 
-# 6) Create ZIP inside new_vers_pack/
+# 6) Create ZIP inside new_vers_pack/ without extra top-level dir
 ZIP_NAME="${OUTPUT_DIR}/saiga_${NEWVER}.zip"
 rm -f "$ZIP_NAME"
-zip -r "$ZIP_NAME" "$DIR_NAME"
+
+(
+  cd "$DIR_NAME"
+  zip -r "../saiga_${NEWVER}.zip" .
+)
 
 # 7) List result
 ls -lh "$ZIP_NAME"
